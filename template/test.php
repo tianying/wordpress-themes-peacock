@@ -23,36 +23,18 @@ get_header(); ?>
 		<div class="container">
 			 <div class="row">
 			 	  <div class="col-md-3">
-					   <!-- 侧边栏导航 | 开始 -->
-				  	   <div class="part">
-					   		<div class="sidebar-navigation">
-								 
-								<div class="column-title">
-									<i>+</i>
-									<span>新闻动态</span>
-									<em>/ News</em>
-								</div>
 
-								<dl class="column-navigation">			
-									<?php echo do_shortcode('[custom_type_category_list]'); ?>
-								</dl>
-
-							</div>
-					   </div>
-					   <!-- 侧边栏导航 | 结束 -->
 				  </div>
 			 	  <div class="col-md-9">
 				  	   <!-- 新闻动态 | 开始 -->
 				  	   <div class="part">
 					   		<div class="main-content">
-								<?php echo do_shortcode('[custom_type_tax_list type="news" tax="news_category"]'); ?>
 								<?php 
-										//global $wp_query;
+										global $wp_query;
 	
 										//echo var_dump( $wp_query );
-										//echo var_dump( $wp_query->query_vars );
-										//echo var_dump( 'aa:'.$wp_query->query_vars['paged'] );
-										//echo var_dump( 'aa:'.get_query_var('paged') );
+										echo var_dump( $wp_query->query_vars );
+										echo var_dump( 'aa:'.$wp_query->query_vars['category'] );
 								 ?>
 									
 							</div>
